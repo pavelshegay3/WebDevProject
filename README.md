@@ -1,5 +1,7 @@
-commit test 1
-
+Group members:
+Pavel Shegay 22B030469
+Ayan Osserbek 22B030494
+Baigabyl Elzhan #id-to-be-added
 # WebProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
