@@ -1,7 +1,8 @@
 Group members:
 Pavel Shegay 22B030469
 Ayan Osserbek 22B030494
-Baigabyl Elzhan #id-to-be-added
+Baigabyl Elzhan 22B030522
+
 # WebProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
