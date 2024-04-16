@@ -24,7 +24,7 @@ def category_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-def category_detail(request, id):
+def category_details(request, id):
     category = get_object_or_404(Category, id=id)
     if request.method == 'GET':
         serializer = CategorySerializer(category)
@@ -56,7 +56,7 @@ def product_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-def product_detail(request, id):
+def product_details(request, id):
     product = get_object_or_404(Product, id=id)
 
     if request.method == 'GET':
