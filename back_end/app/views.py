@@ -41,8 +41,8 @@ def category_details(request, id):
             return Response(serializer.data)
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
-# 2 CLASS BASED VIEWS below for Product
-class products(APIView): # get all products/create or delete a product
+# 2 CLASS BASED VIEWS below for Product and 1 FUNCTION BASED VIEW for products of category
+class products(APIView): # get all products/post or delete a product
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
@@ -70,3 +70,8 @@ class product_details(APIView): # get/update details of a product
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+def products_of_category(request, id):
+    category = get_object_or_404(Category, id=id)
+    products = Product.objects.filter(category=category)
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
