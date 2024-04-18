@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.renderers import JSONRenderer
 
 from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer
@@ -70,8 +71,9 @@ class product_details(APIView): # get/update details of a product
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
 def products_of_category(request, id):
-    category = get_object_or_404(Category, id=id)
-    products = Product.objects.filter(category=category)
+    products = Product.objects.filter(category_id=id)
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)

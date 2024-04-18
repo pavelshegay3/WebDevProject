@@ -9,12 +9,16 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
 class Product(models.Model):
     name = models.CharField(max_length=100)
-    price =models.FloatField()
+    price = models.FloatField()
     description = models.CharField(max_length=100)
     count = models.IntegerField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = "products"
 
     def __str__(self):
         return self.name

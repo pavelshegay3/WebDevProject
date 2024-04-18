@@ -40,5 +40,6 @@ urls.py: <br>
     path('products/', views.products.as_view()) - return all products <br>
     path('products/<int:id>/', views.product_details.as_view()) - return details of a product <br>
     path('categories/<int:id>/products/', views.products_of_category) - return all products of a category <br>
+back_end url examples: http://127.0.0.1:8000/categories/ http://127.0.0.1:8000/categories/2/products/ and so on... <br> 
     
 
