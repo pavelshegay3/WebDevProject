@@ -1,1 +1,16 @@
 <p>home works!</p>
+<div>
+    <ul>
+        <li *ngFor="let category of categories">
+            <a href="javascript:void(0);" (click)="onCategoryClick(category.id)">{{ category.name }}</a>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let product of products">
+            {{ product.name }} - {{ product.price }}
+        </li>
+    </ul>
+</div>

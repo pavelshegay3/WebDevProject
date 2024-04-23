@@ -8,7 +8,7 @@ describe('BarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BarComponent]
+      declarations: [BarComponent]
     })
     .compileComponents();
     
