@@ -28,4 +28,7 @@ export class ProductService {
     getProductsByCategoryId(categoryId: number): Observable<Product[]> {
         return this.http.get<Product[]>(`${this.baseUrl}categories/${categoryId}/products/`)
     }
+    getTopRatedProducts(): Observable<Product[]> {
+        return this.http.get<Product[]>(`${this.baseUrl}products/top_rated/`)
+    }
 }

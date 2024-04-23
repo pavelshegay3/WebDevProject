@@ -10,3 +10,7 @@
     margin-right: 10px;
     margin-bottom: 10px;
 }
+.popular-products {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -13,11 +13,13 @@ export class HomeComponent implements OnInit{
   categories: Category[] = [];
   selectedCategoryId: number | null=null;
   products: Product[] = [];
+  topRatedProducts: Product[] = [];
 
   constructor(private categoryService: CategoryService, private productService: ProductService){
   }
   ngOnInit(): void {
     this.loadCategories();
+    this.loadTopRatedProducts();
   }
 
   loadCategories() {
@@ -38,5 +40,11 @@ export class HomeComponent implements OnInit{
 
   onCategoryClick(categoryId: number){
     this.loadProductsByCategory(categoryId)
+  }
+
+  loadTopRatedProducts(): void {
+    this.productService.getTopRatedProducts().subscribe(products => {
+      this.topRatedProducts = products;
+    });
   }
 }

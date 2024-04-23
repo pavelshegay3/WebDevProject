@@ -16,3 +16,7 @@ class ProductSerializer(serializers.Serializer):
     count = serializers.IntegerField()
     category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
     rating = serializers.FloatField(default=0.0)
+
+    class Meta:
+        model = Product
+        fields = ['id', 'name', 'price', 'description', 'count', 'category_id', 'rating']
