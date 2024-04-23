@@ -11,19 +11,17 @@ Topic: tech store's website. <br>
 
 /////////////////////////////////////////////////////////////// <br>
 
-To do: <br>
-
+ЧТО СДЕЛАНО: <br>
 BACK_END: <br>
- - Прописать модели и их сериализации для продуктов и категорий - СДЕЛАНО <br>
- - Прописать вьюшки и юрлшки для продуктов и категорий - СДЕЛАНО <br>
- - и еще... <br>
+- Models and serializers of products, categories
+- Views for products, categories
+- Urls for products, categories <br>
 
 FRONT_END: <br>
- - Прописать сервисы - для продуктов и категорий, чтобы связываться с бэк-эндом <br>
- - Прописать юрлшки, связать страницы фронт-энда, написать код в компоненте bar, чтобы переключаться между рызными страницами/компонентами<br>
- - Протестировать работу вышесделанных сервисов в html компонентах, например в category-list, home и т.д <br>
-
-<br>
+- Home page
+- Top bar (navigation bar)
+- Urls for home
+- Services and interfaces for products, categories
 
 /////////////////////////////////////////////////////////////// <br>
 
