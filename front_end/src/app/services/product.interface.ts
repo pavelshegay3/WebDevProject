@@ -5,4 +5,5 @@ export interface Product {
     description: string;
     count: number;
     category_id: number;
+    rating: number;
 }
