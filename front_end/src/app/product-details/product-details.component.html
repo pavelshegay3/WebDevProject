@@ -1,0 +1,9 @@
+<div *ngIf="product">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.price }} т      {{ product.rating }}</p>
+    <p>Описание: {{ product.description }}</p>
+</div>
+
+<div *ngIf="!product">
+    <h2>Product not found</h2>
+</div>

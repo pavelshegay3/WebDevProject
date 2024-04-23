@@ -1,0 +1,10 @@
+.product-tile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+}

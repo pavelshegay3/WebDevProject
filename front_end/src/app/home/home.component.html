@@ -1,16 +1,11 @@
-<p>home works!</p>
 <div>
-    <ul>
-        <li *ngFor="let category of categories">
-            <a href="javascript:void(0);" (click)="onCategoryClick(category.id)">{{ category.name }}</a>
-        </li>
-    </ul>
+    <div class="category-list">
+        <button *ngFor="let category of categories | slice:0:5" 
+            href="javascript:void(0);" (click)="onCategoryClick(category.id)">{{ category.name }}
+        </button>
+    </div>
 </div>
 
-<div>
-    <ul>
-        <li *ngFor="let product of products">
-            {{ product.name }} - {{ product.price }}
-        </li>
-    </ul>
+<div class="product-list">
+    <app-product-tile *ngFor="let product of products" [product]="product"></app-product-tile>
 </div>
