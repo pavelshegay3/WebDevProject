@@ -14,3 +14,4 @@ class ProductSerializer(serializers.Serializer):
     description = serializers.CharField(max_length=100)
     count = serializers.IntegerField()
     category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
+    rating = serializers.FloatField(default=0.0)

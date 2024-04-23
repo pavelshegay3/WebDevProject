@@ -16,6 +16,7 @@ class Product(models.Model):
     description = models.CharField(max_length=100)
     count = models.IntegerField()
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    rating = models.FloatField(default=0.0)
 
     class Meta:
         verbose_name_plural = "products"
