@@ -78,8 +78,14 @@ def products_of_category(request, id):
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
 
-class TopRatedProducts(APIView):
+class top_rated_products(APIView):
     def get(self, request):
         products = Product.objects.all().order_by('-rating')
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
+    
+@api_view(['GET'])
+def search_products(request, query):
+    products = Product.objects.filter(name__icontains=query)
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)

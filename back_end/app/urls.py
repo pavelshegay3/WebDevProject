@@ -11,6 +11,7 @@ urlpatterns = [
     path('products/', views.products.as_view()),
     path('products/<int:id>/', views.product_details.as_view()),
     path('categories/<int:id>/products/', views.products_of_category),
-    
-    path('products/top_rated/', views.TopRatedProducts.as_view()),
+    #miscellaneous
+    path('products/top_rated/', views.top_rated_products.as_view()),
+    path('products/search/<str:query>/', views.search_products)
 ]

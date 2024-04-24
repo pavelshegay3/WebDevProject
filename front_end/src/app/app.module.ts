@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductTileComponent } from './product-tile/product-tile.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AddressBarComponent } from './address-bar/address-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AddressBarComponent } from './address-bar/address-bar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

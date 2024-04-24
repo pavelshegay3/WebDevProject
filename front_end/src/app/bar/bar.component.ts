@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bar',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './bar.component.css'
 })
 export class BarComponent {
+  query: string = '';
 
+  @Output() searchQuery: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor(private router: Router) {}
+
+  onSearch() {
+    this.searchQuery.emit(this.query);
+    this.router.navigate(['/search', this.query, '/']);
+  }
 }

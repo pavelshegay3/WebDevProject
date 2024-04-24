@@ -2,3 +2,8 @@
 <div>
     <button routerLink="/" id="home-button">Home</button>
 </div>
+
+<div>
+    <input type="text" [(ngModel)]="query" />
+    <button (click)="onSearch()">Search</button>
+</div>
