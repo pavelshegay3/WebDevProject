@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.renderers import JSONRenderer
+from django.db.models import Q
 
 from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer
@@ -86,6 +87,6 @@ class top_rated_products(APIView):
     
 @api_view(['GET'])
 def search_products(request, query):
-    products = Product.objects.filter(name__icontains=query)
+    products = Product.objects.filter(Q(name__icontains=query))
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)

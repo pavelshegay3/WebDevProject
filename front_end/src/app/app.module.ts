@@ -9,6 +9,7 @@ import { ProductTileComponent } from './product-tile/product-tile.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AddressBarComponent } from './address-bar/address-bar.component';
 import { FormsModule } from '@angular/forms';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     ProductTileComponent,
     ProductDetailsComponent,
     AddressBarComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

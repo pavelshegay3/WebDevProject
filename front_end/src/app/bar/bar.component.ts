@@ -15,6 +15,6 @@ export class BarComponent {
 
   onSearch() {
     this.searchQuery.emit(this.query);
-    this.router.navigate(['/search', this.query, '/']);
+    this.router.navigate(['/search', this.query]);
   }
 }
