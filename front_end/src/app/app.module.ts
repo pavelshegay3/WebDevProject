@@ -7,6 +7,7 @@ import { BarComponent } from './bar/bar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductTileComponent } from './product-tile/product-tile.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AddressBarComponent } from './address-bar/address-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HomeComponent,
     ProductTileComponent,
     ProductDetailsComponent,
+    AddressBarComponent,
   ],
   imports: [
     BrowserModule,

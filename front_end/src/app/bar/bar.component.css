@@ -1,0 +1,15 @@
+#home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color, you can change it */
+    color: #ffffff; /* White text color, you can change it */
+    border: none;
+    border-radius: 20px; /* Adjust the value to make it more or less round */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+#home-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover, you can change it */
+}
