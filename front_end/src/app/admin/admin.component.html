@@ -1,8 +1,10 @@
-<p>admin works!</p>
-<h2>Categories</h2>
+<h2>Категории</h2>
 <ul>
-    <li *ngFor="let category of categories">{{ category.name }}</li>
+    <li *ngFor="let category of categories">
+        <button (click)="deleteCategory(category.id)">Удалить</button>
+        {{ category.name }} - {{ category.id }}
+    </li>
 </ul>
-<h3>Add New Category</h3>
+<h3>Создать новую категорию</h3>
 <input type="text" [(ngModel)]="newCategory.name" placeholder="Category Name">
-<button (click)="createCategory()">Add Category</button>
+<button (click)="createCategory()">Создать</button>

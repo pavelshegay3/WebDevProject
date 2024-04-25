@@ -31,4 +31,10 @@ export class AdminComponent implements OnInit{
         });
     }
   }
+  deleteCategory(categoryId: number): void {
+    this.categoryService.deleteCategory(categoryId)
+      .subscribe(() => {
+        this.categories = this.categories.filter(category => category.id !== categoryId);
+      });
+  }
 }
