@@ -26,3 +26,4 @@ export class CategoryService {
         return this.http.put<Category>(`${this.baseUrl}categories/${id}/`, category);
     }
 }
+
