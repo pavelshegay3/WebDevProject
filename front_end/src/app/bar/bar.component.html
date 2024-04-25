@@ -1,9 +1,11 @@
-<h1>Pustozvon.kz</h1>
-<div>
-    <button routerLink="/" id="home-button">Home</button>
-</div>
+<div class="row">
+    <h1>Pustozvon.kz</h1>   
 
-<div>
-    <input type="text" [(ngModel)]="query" />
-    <button (click)="onSearch()">Search</button>
+    <div class="search">
+        <input type="text" [(ngModel)]="query" placeholder="Введите запрос" id="search-bar"/>
+        <button (click)="onSearch()" id="search-button">Поиск</button>
+    </div>
+</div>
+<div class="buttons">
+    <button routerLink="/" id="home-button">Главная</button>
 </div>

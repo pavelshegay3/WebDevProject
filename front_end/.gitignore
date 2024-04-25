@@ -42,6 +42,9 @@ testem.log
 Thumbs.db
 .angular/
 node_modules/
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 1d7769084007b263ca58550ef70e2c146ca81283

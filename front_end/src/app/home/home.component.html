@@ -1,7 +1,8 @@
 <div>
     <div class="category-list">
         <button *ngFor="let category of categories | slice:0:5" 
-            href="javascript:void(0);" (click)="onCategoryClick(category.id)">{{ category.name }}
+            href="javascript:void(0);" (click)="onCategoryClick(category.id)" class="category-button">
+            {{ category.name }}
         </button>
     </div>
 </div>

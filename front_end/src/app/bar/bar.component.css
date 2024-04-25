@@ -1,15 +1,72 @@
 #home-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Blue color, you can change it */
-    color: #ffffff; /* White text color, you can change it */
-    border: none;
-    border-radius: 20px; /* Adjust the value to make it more or less round */
+    background-color: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 25px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: #000000;
 }
+
 #home-button:hover {
-    background-color: #0056b3; /* Darker blue color on hover, you can change it */
+    background-color: #cccccc;
+    color: #000000;
 }
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+h1 {
+    margin-right: 20px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.search input {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.buttons {
+    padding-top: 10px;
+}
+
+#search-button {
+    display: inline-block;
+    background-color: transparent;
+    padding: 4px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: #000000;
+}
+#search-button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+#search-bar {
+    display: inline-block;
+    background-color: transparent;
+    padding: 4px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: #000000;
+}
+

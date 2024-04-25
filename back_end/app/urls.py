@@ -13,5 +13,5 @@ urlpatterns = [
     path('categories/<int:id>/products/', views.products_of_category),
     #miscellaneous
     path('products/top_rated/', views.top_rated_products.as_view()),
-    path('products/search/<str:query>/', views.search_products)
+    path('products/search/<str:query>/', views.search_products),
 ]

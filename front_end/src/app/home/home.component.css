@@ -1,6 +1,7 @@
 .category-list {
     display: flex;
     flex-wrap:wrap;
+    margin-bottom: 10px;
 }
 .category-list li {
     margin-right: 10px;
@@ -13,4 +14,22 @@
 .popular-products {
     display: flex;
     flex-wrap: wrap;
+}
+
+.category-button {
+    display: inline-block;
+    background-color: transparent;
+    padding: 4px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: #000000;
+}
+.category-button:hover {
+    background-color: #cccccc;
+    color: #000000;
 }
