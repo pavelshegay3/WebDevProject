@@ -14,7 +14,7 @@ from .serializers import CategorySerializer, ProductSerializer
 # Create your views here.
 
 # 2 FUNCTION BASED VIEWS below for Category
-@api_view(['GET', 'POST', 'DELETE']) # get all products/post or delete a category
+@api_view(['GET', 'POST']) # get all categories or post a new category
 def categories(request, id=None):
     if request.method == 'GET':
         categories = Category.objects.all()
@@ -26,11 +26,8 @@ def categories(request, id=None):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)  # success
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # failure
-    elif request.method == 'DELETE':
-        category = get_object_or_404(Category, id=id)
-        category.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-@api_view(['GET', 'PUT']) # get/update details of a category
+    
+@api_view(['GET', 'PUT', 'DELETE']) # get/update details of a category or delete a specific category
 def category_details(request, id):
     category = get_object_or_404(Category, id=id)
     if request.method == 'GET':
@@ -42,6 +39,10 @@ def category_details(request, id):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        category = get_object_or_404(Category, id=id)
+        category.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 # 2 CLASS BASED VIEWS below for Product and 1 FUNCTION BASED VIEW for products of category
 class products(APIView): # get all products/post or delete a product

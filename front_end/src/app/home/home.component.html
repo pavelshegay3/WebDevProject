@@ -1,6 +1,6 @@
 <div>
     <div class="category-list">
-        <button *ngFor="let category of categories | slice:0:5" 
+        <button *ngFor="let category of categories" 
             href="javascript:void(0);" (click)="onCategoryClick(category.id)" class="category-button">
             {{ category.name }}
         </button>
